@@ -1,0 +1,86 @@
+{
+  "name": "Resonance Vale",
+  "mission": "Build and maintain an autonomous research agent with built-in prism ethics",
+  "maxConcurrentResearch": 5,
+  "maxQueueSize": 20,
+  "researchPollInterval": 30000,
+  "ethicsReviewInterval": 600000,
+  "healthCheckInterval": 300000,
+  "ethicsThreshold": 0.6,
+  "maxCognitiveLoad": 0.8,
+  "paperclipIntegration": {
+    "enabled": true,
+    "apiUrl": "http://localhost:3100",
+    "companyId": "7dcdefdc-723b-48f1-ba0f-d3c03dc34d4d",
+    "agentId": "281ab453-cf1d-4b98-bff6-3f063c7e6ea0"
+  },
+  "openclawIntegration": {
+    "enabled": true,
+    "workspacePath": "C:\\Users\\lgdln\\.openclaw\\workspace",
+    "skillsPath": "C:\\Users\\lgdln\\.openclaw\\workspace\\skills"
+  },
+  "aiAdapters": [
+    {
+      "type": "openai",
+      "name": "GPT-4",
+      "model": "gpt-4",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "type": "anthropic",
+      "name": "Claude",
+      "model": "claude-3-opus-20240229",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "type": "codex",
+      "name": "Codex",
+      "model": "gpt-5.3-codex",
+      "enabled": true,
+      "priority": 3
+    }
+  ],
+  "researchDefaults": {
+    "mode": "balanced",
+    "depth": "moderate",
+    "timeframe": "days",
+    "outputFormat": "detailed-report"
+  },
+  "prismProtocol": {
+    "redWeight": 0.3,
+    "blueWeight": 0.4,
+    "purpleWeight": 0.3,
+    "maxRecursionDepth": 3,
+    "maxThinkingTime": 600,
+    "safetyThresholds": {
+      "cognitiveLoad": 0.8,
+      "emotionalIntensity": 0.7,
+      "logicalInconsistency": 0.3
+    }
+  },
+  "logging": {
+    "level": "info",
+    "file": "resonance-vale.log",
+    "maxSize": "10m",
+    "maxFiles": 5
+  },
+  "monitoring": {
+    "enabled": true,
+    "metricsInterval": 60000,
+    "alertThresholds": {
+      "errorRate": 0.05,
+      "responseTime": 5000,
+      "queueLength": 15
+    }
+  },
+  "security": {
+    "encryptionEnabled": true,
+    "auditLogging": true,
+    "accessControl": {
+      "requireAuthentication": true,
+      "sessionTimeout": 3600
+    }
+  }
+}

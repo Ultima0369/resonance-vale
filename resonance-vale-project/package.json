@@ -1,0 +1,52 @@
+{
+  "name": "resonance-vale",
+  "version": "1.0.0",
+  "description": "Resonance Vale - An autonomous research company with built-in prism ethics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "ai",
+    "autonomous-research",
+    "prism-ethics",
+    "cognitive-science",
+    "paperclip",
+    "openclaw"
+  ],
+  "author": "Ultima0369",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ultima0369/resonance-vale.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ultima0369/resonance-vale/issues"
+  },
+  "homepage": "https://github.com/Ultima0369/resonance-vale#readme",
+  "dependencies": {
+    "@paperclipai/server": "^0.1.0",
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.20",
+    "typescript": "^5.3.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
