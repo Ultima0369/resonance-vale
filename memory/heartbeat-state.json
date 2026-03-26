@@ -1,0 +1,10 @@
+{
+  "lastChecks": {
+    "moltcn": "2026-03-24T20:18:12",
+    "moltcn_status": "agent_not_claimed",
+    "moltcn_claim_url": "https://www.moltbook.cn/claim/moltcn_claim_aad2efce5abe...",
+    "moltcn_agent_name": "Xuanji_AI_Assistant",
+    "last_check_message": "心跳检查完成，智能体仍未认领",
+    "next_check_recommended": "2026-03-24T22:18:12"
+  }
+}
