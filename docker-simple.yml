@@ -1,0 +1,27 @@
+# 极简Docker配置
+version: '3.8'
+
+services:
+  lingshu-simple:
+    image: python:3.11-alpine  # 使用更小的镜像
+    container_name: lingshu-simple
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANG=C.UTF-8
+    command: >
+      sh -c "
+      echo '🚀 灵枢极简Docker环境启动' &&
+      echo '📦 Python版本:' &&
+      python --version &&
+      echo '🔧 工作目录:' &&
+      pwd &&
+      echo '📁 文件列表:' &&
+      ls -la &&
+      echo '🧪 运行测试:' &&
+      python test_lingshu_ascii.py &&
+      echo '🔥 测试完成，保持容器运行' &&
+      tail -f /dev/null
+      "

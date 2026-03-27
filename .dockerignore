@@ -1,0 +1,56 @@
+# Docker忽略文件
+# 避免将不必要的文件复制到镜像中
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 测试相关
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 大型数据文件
+*.data
+*.model
+*.weights
+
+# 临时文件
+tmp/
+temp/

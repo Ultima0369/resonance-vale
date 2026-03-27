@@ -1,0 +1,40 @@
+# 灵枢离线开发环境Dockerfile
+# 使用更小的基础镜像，避免网络问题
+
+FROM alpine:3.19
+
+# 设置环境变量
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+ENV PYTHONUNBUFFERED=1
+
+# 安装Python和基本工具
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    git \
+    bash \
+    curl \
+    tree \
+    && ln -sf python3 /usr/bin/python
+
+# 设置工作目录
+WORKDIR /workspace
+
+# 创建非root用户
+RUN adduser -D -u 1000 developer && \
+    chown -R developer:developer /workspace
+USER developer
+
+# 复制项目文件
+COPY --chown=developer:developer . .
+
+# 安装最小Python依赖
+RUN pip3 install --user --no-cache-dir \
+    pyyaml
+
+# 设置PATH
+ENV PATH="/home/developer/.local/bin:${PATH}"
+
+# 默认命令
+CMD ["bash"]
