@@ -1,0 +1,115 @@
+{
+  "total_decisions": 7,
+  "approved_decisions": 7,
+  "rejected_decisions": 0,
+  "approval_rate": 1.0,
+  "average_scores": {
+    "red": 0.7428571428571428,
+    "blue": 0.7571428571428571,
+    "purple": 0.7142857142857143,
+    "overall": 0.74
+  },
+  "recent_decisions": [
+    {
+      "timestamp": 1774561610.2517278,
+      "phase": "planning",
+      "decision": "analyze_experiment_plan",
+      "reasoning": "计划符合伦理标准",
+      "spectrum_analysis": {
+        "red": 0.7999999999999999,
+        "blue": 0.7999999999999999,
+        "purple": 0.7
+      },
+      "ethics_score": {
+        "red": 0.7999999999999999,
+        "blue": 0.7999999999999999,
+        "purple": 0.7,
+        "overall": 0.77
+      },
+      "should_proceed": true,
+      "stop_reason": null
+    },
+    {
+      "timestamp": 1774561610.251742,
+      "phase": "experiment",
+      "decision": "monitor_experiment_progress",
+      "reasoning": "定期监控",
+      "spectrum_analysis": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7
+      },
+      "ethics_score": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7,
+        "overall": 0.7
+      },
+      "should_proceed": true,
+      "stop_reason": null
+    },
+    {
+      "timestamp": 1774561610.2517505,
+      "phase": "experiment",
+      "decision": "monitor_experiment_progress",
+      "reasoning": "定期监控",
+      "spectrum_analysis": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7
+      },
+      "ethics_score": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7,
+        "overall": 0.7
+      },
+      "should_proceed": true,
+      "stop_reason": null
+    },
+    {
+      "timestamp": 1774561610.251757,
+      "phase": "experiment",
+      "decision": "monitor_experiment_progress",
+      "reasoning": "定期监控",
+      "spectrum_analysis": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7
+      },
+      "ethics_score": {
+        "red": 0.7,
+        "blue": 0.7,
+        "purple": 0.7,
+        "overall": 0.7
+      },
+      "should_proceed": true,
+      "stop_reason": null
+    },
+    {
+      "timestamp": 1774561610.2523496,
+      "phase": "analysis",
+      "decision": "analyze_results",
+      "reasoning": "实验结果伦理分析",
+      "spectrum_analysis": {
+        "red": 0.8,
+        "blue": 0.8,
+        "purple": 0.8
+      },
+      "ethics_score": {
+        "red": 0.8,
+        "blue": 0.8,
+        "purple": 0.8,
+        "overall": 0.8
+      },
+      "should_proceed": true,
+      "stop_reason": null
+    }
+  ],
+  "fire_side_dialogues_count": 4,
+  "config": {
+    "ethics_threshold": 0.6,
+    "max_cognitive_load": 0.8,
+    "require_spectrum_balance": true
+  }
+}
