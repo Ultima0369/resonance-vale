@@ -4,12 +4,24 @@
   "description": "Resonance Vale - An autonomous research company with built-in prism ethics",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "dev:watch": "nodemon --exec ts-node src/index.ts --watch src",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "build": "tsc",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist node_modules",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "init": "node scripts/init.js",
+    "docs": "typedoc src/index.ts --out docs/api",
+    "precommit": "npm run lint && npm run test && npm run build",
+    "prepare": "husky install"
   },
   "keywords": [
     "ai",
@@ -39,11 +51,22 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@types/express": "^4.17.20",
+    "@types/jest": "^29.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
     "typescript": "^5.3.0",
+    "ts-node": "^10.9.0",
     "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
     "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.1.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0",
+    "typedoc": "^0.25.0",
+    "@typedoc/plugin-no-inherit": "^1.4.0"
   },
   "engines": {
     "node": ">=18.0.0",
